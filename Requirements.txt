@@ -1,0 +1,9 @@
+transformers
+torch
+sentencepiece
+protobuf
+datasets
+rouge-score
+matplotlib
+numpy
+pandas
