@@ -34,7 +34,7 @@ if __name__ == "__main__":
             final_ko = translator.translate(final_en)
             print_section("한국어 번역\n")
             print(f"[1차 한국어 번역]: {mid_ko}\n")
-            print(f"[한국어 번역]: {final_ko}\n")
+            print(f"[최종 한국어 번역]: {final_ko}\n")
 
     else:
         print_section("배치 평가 모드 (CNN/DailyMail 샘플)\n")
@@ -53,7 +53,7 @@ if __name__ == "__main__":
             print(f"[1차 영어 요약]: {mid_en}\n")
             print(f"[1차 한국어 번역]: {mid_ko}\n")
             print(f"[최종 영어 한 줄 요약]: {final_en}\n")
-            print(f"[한국어 번역]: {final_ko}\n")
+            print(f"[최종 한국어 번역]: {final_ko}\n")
 
             english_summaries.append(final_en)
             korean_summaries.append(final_ko)
@@ -63,3 +63,5 @@ if __name__ == "__main__":
         plot_rouge_scores(rouge_scores)
 
         print_section("평가 완료")
+
+    input("\n\n 종료하려면, 엔터를 누르세요...")
