@@ -31,7 +31,7 @@ class EnglishSummarizer:
         try:
             summary_ids = self.model.generate(
                 inputs["input_ids"],        # 인풋 아이디 텐서
-                num_beams=4,                # 빔 서치 개수 (가장 확률이 높은 문장 후보를 4개 가지치지 하면서 탐색함)
+                num_beams=5,                # 빔 서치 개수 (가장 확률이 높은 문장 후보를 4개 가지치지 하면서 탐색함)
                                             # >> 빔 개수가 많을수록 성능이 좋아지지만 속도는 확연히 느려짐
                 max_length=max_len,         # 요약문 최대 길이
                 min_length=min_len,         # 요약문 최소 길이
@@ -68,4 +68,5 @@ class EnglishSummarizer:
 
         if return_both:
             return mid, final
+
         return final
